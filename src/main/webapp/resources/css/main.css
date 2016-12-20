@@ -83,7 +83,7 @@ a:hover {
 .navbar-header .navbar-brand a {
   height: auto;
   display: inline-block;
-  margin-top: 8px;
+  margin-top: -25px;
 }
 .navbar-inverse .navbar-toggle:focus,
 .navbar-inverse .navbar-toggle {
@@ -194,7 +194,7 @@ a:hover {
   border-radius: 0;
 }
 #call-to-action {
-  background: #02bdd5;
+  background: #7577ff;
   background-size: cover;
   background-attachment: fixed;
   padding: 80px 0;
@@ -220,7 +220,7 @@ a:hover {
 #call-to-action .block .btn-contact {
   background: #fff;
   border: none;
-  color: #02bdd5;
+  color:  #7577ff;
   padding: 16px 35px;
   margin-top: 20px;
   font-size: 12px;
@@ -252,6 +252,7 @@ a:hover {
 #about .block img {
   max-width: 100%;
 }
+
 .works {
   padding: 80px 0;
   background: #FCFCFC;
@@ -520,7 +521,7 @@ figure figcaption p {
   color: #02bdd5;
 }
 .cd-headline.slide .cd-words-wrapper {
-  color: #02bdd5;
+  color: #7577ff;
 }
 ul.social-icons {
   height: auto;

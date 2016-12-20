@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <!-- Basic Page Needs
+================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" type="image/png" href="../../../resources/images/favicon.png">
+    <title>Run Far Proto</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Template CSS Files
+    ================================================== -->
+    <!-- Twitter Bootstrs CSS -->
+    <link rel="stylesheet" href="../../../resources/css/bootstrap.min.css">
+    <!-- Ionicons Fonts Css -->
+    <link rel="stylesheet" href="../../../resources/css/ionicons.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="../../../resources/css/animate.css">
+    <!-- Hero area slider css-->
+    <link rel="stylesheet" href="../../../resources/css/slider.css">
+    <!-- owl craousel css -->
+    <link rel="stylesheet" href="../../../resources/css/owl.carousel.css">
+    <link rel="stylesheet" href="../../../resources/css/owl.theme.css">
+    <link rel="stylesheet" href="../../../resources/css/jquery.fancybox.css">
+    <!-- template main css file -->
+    <link rel="stylesheet" href="../../../resources/css/main.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../../../resources/css/responsive.css">
+
+    <!-- Template Javascript Files
+    ================================================== -->
+    <!-- modernizr js -->
+    <script src="../../../resources/js/vendor/modernizr-2.6.2.min.js"></script>
+    <!-- jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- owl carouserl js -->
+    <script src="../../../resources/js/owl.carousel.min.js"></script>
+    <!-- bootstrap js -->
+
+    <script src="../../../resources/js/bootstrap.min.js"></script>
+    <!-- wow js -->
+    <script src="../../../resources/js/wow.min.js"></script>
+    <!-- slider js -->
+    <script src="../../../resources/js/slider.js"></script>
+    <script src="../../../resources/js/jquery.fancybox.js"></script>
+    <!-- template main js -->
+    <script src="../../../resources/js/main.js"></script>
     <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
 </head>
 <body>
 
 <!-- Header -->
-<div class="navbar navbar-inverse navbar-fixed-top" th:fragment="header">
+<header id="top-bar" class="navbar-fixed-top animated-header" th:fragment="header">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
@@ -14,10 +65,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Demo project</a>
+
+            <div class="navbar-brand" href="#" th:href="@{/}">
+                <a href="index.html" >
+                    <img src="../../../resources/images/logo.png" alt="">
+                </a>
+            </div>
         </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+        <div class="navbar-collapse collapse navbar-right" role="navigation">
+            <div class="main-menu">
+            <ul class="nav navbar-nav navbar-right">
                 <li th:classappend="${module == 'home' ? 'active' : ''}">
                     <a href="#" th:href="@{/}">Home</a>
                 </li>
@@ -38,16 +95,21 @@
                     <form style="visibility: hidden" id="form" method="post" action="#" th:action="@{/logout}"></form>
                 </li>
             </ul>
+            </div>
         </div>
         <!--/.nav-collapse -->
     </div>
-</div>
+</header>
 
 <!-- Footer -->
-<div th:fragment="footer" th:align="center">
-    &copy;&nbsp;<span th:text="${#temporals.format(#temporals.createNow(), 'yyyy')}">2016</span>
-    Demo project <span th:text="${@environment.getProperty('app.version')}"></span>
-</div>
+<footer id="footer">
+    <div class="container">
+        <div class="col-md-8">
+            <p class="copyright">Copyright: <span>2016</span> . Designed and Developed by Seth K. Lunn</p>
+        </div>
+
+    </div>
+</footer> <!-- /#footer -->
 
 </body>
 </html>

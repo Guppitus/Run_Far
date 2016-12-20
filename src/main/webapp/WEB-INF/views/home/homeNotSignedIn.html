@@ -55,7 +55,6 @@
 
 </head>
 <body>
-<div th:replace="fragments/layout :: header"></div>
 <script th:inline="javascript" type="text/javascript">
     /* Fill in modal with content loaded with Ajax */
     $(document).ready(function () {
@@ -315,12 +314,7 @@
     Footer Section Start
     ================================================== -->
     <footer id="footer">
-        <div class="container">
-            <div class="col-md-8">
-                <p class="copyright">Copyright: <span>2016</span> . Design and Developed by Seth K. Lunn</p>
-            </div>
-
-        </div>
+        <div th:replace="fragments/layout :: footer"></div>
     </footer> <!-- /#footer -->
 
 </div>
