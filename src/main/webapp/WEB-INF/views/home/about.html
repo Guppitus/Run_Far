@@ -1,20 +1,79 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title th:text="#{view.index.title}">Welcome!</title>
+    <title>Sign In</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
     <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
-    <script src="../../../resources/js/jquery.min.js" th:src="@{/resources/js/jquery.min.js}"></script>
-    <script src="../../../resources/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap.min.js}"></script>
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Template CSS Files
+    ================================================== -->
+    <!-- Twitter Bootstrs CSS -->
+    <link rel="stylesheet" href="../../../resources/css/bootstrap.min.css">
+    <!-- Ionicons Fonts Css -->
+    <link rel="stylesheet" href="../../../resources/css/ionicons.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="../../../resources/css/animate.css">
+    <!-- Hero area slider css-->
+    <link rel="stylesheet" href="../../../resources/css/slider.css">
+    <!-- owl craousel css -->
+    <link rel="stylesheet" href="../../../resources/css/owl.carousel.css">
+    <link rel="stylesheet" href="../../../resources/css/owl.theme.css">
+    <link rel="stylesheet" href="../../../resources/css/jquery.fancybox.css">
+    <!-- template main css file -->
+    <link rel="stylesheet" href="../../../resources/css/main.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../../../resources/css/responsive.css">
+
+    <!-- Template Javascript Files
+    ================================================== -->
+    <!-- modernizr js -->
+    <script src="../../../resources/js/vendor/modernizr-2.6.2.min.js"></script>
+    <!-- jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- owl carouserl js -->
+    <script src="../../../resources/js/owl.carousel.min.js"></script>
+    <!-- bootstrap js -->
+
+    <script src="../../../resources/js/bootstrap.min.js"></script>
+    <!-- wow js -->
+    <script src="../../../resources/js/wow.min.js"></script>
+    <!-- slider js -->
+    <script src="../../../resources/js/slider.js"></script>
+    <script src="../../../resources/js/jquery.fancybox.js"></script>
+    <!-- template main js -->
+    <script src="../../../resources/js/main.js"></script>
+
 </head>
 <body>
 <div th:replace="fragments/layout :: header"></div>
+<section id="about" >
 <div class="container">
     <p class="lead text-center">
         About
     </p>
 </div>
 <div th:replace="fragments/layout :: footer"></div>
+</section>
+<section id="call-to-action">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Me</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 </body>
 </html>

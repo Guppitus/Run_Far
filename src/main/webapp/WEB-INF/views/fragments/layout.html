@@ -55,52 +55,71 @@
     <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
 </head>
 <body>
+<div>
+    <!-- Header -->
+    <header id="top-bar" class="navbar-fixed-top animated-header" th:fragment="header">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- responsive nav button -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- /responsive nav button -->
 
-<!-- Header -->
-<header id="top-bar" class="navbar-fixed-top animated-header" th:fragment="header">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <div class="navbar-brand" href="#" th:href="@{/}">
-                <a href="index.html" >
-                    <img src="../../../resources/images/logo.png" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="navbar-collapse collapse navbar-right" role="navigation">
-            <div class="main-menu">
-            <ul class="nav navbar-nav navbar-right">
-                <li th:classappend="${module == 'home' ? 'active' : ''}">
-                    <a href="#" th:href="@{/}">Home</a>
-                </li>
-                <li th:classappend="${module == 'about' ? 'active' : ''}">
-                    <a href="#about" th:href="@{/about}">About</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li th:if="${#authorization.expression('!isAuthenticated()')}">
-                    <a href="/signin" th:href="@{/signin}">
-                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Sign in
+                <!-- logo -->
+                <div class="navbar-brand"  href="#" th:href="@{/}">
+                    <a href="index.html">
+                        <img src="../../../resources/images/logo.png" alt="">
                     </a>
-                </li>
-                <li th:if="${#authorization.expression('isAuthenticated()')}">
-                    <a href="/logout" th:href="@{#}" onclick="$('#form').submit();">
-                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Logout
-                    </a>
-                    <form style="visibility: hidden" id="form" method="post" action="#" th:action="@{/logout}"></form>
-                </li>
-            </ul>
+                </div>
+                <!-- /logo -->
             </div>
+            <!-- main menu -->
+            <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                <div class="main-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li th:classappend="${module == 'home' ? 'active' : ''}">
+                            <a href="#home" th:href="@{/}">Home</a>
+                        </li>
+                        <li th:classappend="${module == 'about' ? 'active' : ''}">
+                            <a href="#about" th:href="@{/about}">About</a>
+                        </li>
+                        <!--     <li><a href="service.html">Service</a></li>
+                             <li class="dropdown">
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Runs <span class="caret"></span></a>
+                                 <div class="dropdown-menu">
+                                     <ul>
+                                         <li><a href="mordor.html">Mordor</a></li>
+                                         <li><a href="appalachian.html">Appalachian Trail</a></li>
+                                         <li><a href="greatwall.html">Great Wall</a></li>
+                                         <li><a href="moon.html">Moon</a></li>
+                                     </ul>
+                                 </div>
+                             </li>
+                             <li><a href="contact.html">Contact</a></li> -->
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li th:if="${#authorization.expression('!isAuthenticated()')}">
+                            <a href="/signin" th:href="@{/signin}">
+                                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Sign in
+                            </a>
+                        </li>
+                        <li th:if="${#authorization.expression('isAuthenticated()')}">
+                            <a href="/logout" th:href="@{#}" onclick="$('#form').submit();">
+                                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Logout
+                            </a>
+                            <form style="visibility: hidden" id="form" method="post" action="#" th:action="@{/logout}"></form>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- /main nav -->
         </div>
-        <!--/.nav-collapse -->
-    </div>
-</header>
-
+    </header>
+</div>
 <!-- Footer -->
 <footer id="footer">
     <div class="container">
