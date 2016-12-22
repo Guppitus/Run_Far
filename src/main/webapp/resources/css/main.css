@@ -426,10 +426,10 @@ figure figcaption p {
   margin-top: 35px;
   color: #fff;
   outline: none;
-  background: #02bdd5;
+  background: #7577ff;
 }
 #contact-section .contact-form .btn-send:hover {
-  border: 1px solid #02bdd5;
+  border: 1px solid #7577ff;
 }
 #contact-section input {
   display: block;
@@ -479,7 +479,7 @@ figure figcaption p {
 #contact-section .email i,
 #contact-section .phone i {
   font-size: 45px;
-  color: #02bdd5;
+  color: #7577ff;
 }
 #contact-section .address h5,
 #contact-section .email h5,
@@ -506,7 +506,7 @@ figure figcaption p {
   margin-top: 10px;
 }
 #footer .copyright a {
-  color: #02bdd5;
+  color: #7577ff;
 }
 #footer .social {
   text-align: right;
@@ -518,7 +518,7 @@ figure figcaption p {
 }
 #footer .social li a {
   font-size: 22px;
-  color: #02bdd5;
+  color: #7577ff;
 }
 .cd-headline.slide .cd-words-wrapper {
   color: #7577ff;
@@ -547,7 +547,7 @@ ul.social-icons li {
   background-size: cover;
   padding: 120px 0 25px 0;
   position: relative;
-  background: #02bdd5;
+  background: #7577ff;
   color: #fff;
 }
 .global-page-header h2 {
@@ -1059,7 +1059,7 @@ article {
   background: #fff;
 }
 .navbar-toggle {
-  background: #000;
+  background: #7577ff;
 }
 .dropdown-menu > ul {
   list-style: none;
